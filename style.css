@@ -1,57 +1,185 @@
+/* Custom Styles for a Modern & Engaging Look (style.css) */
+
+/* Global Settings */
+:root {
+    --bs-primary: #5a55b2; /* لون أساسي أكثر عمقاً */
+    --bs-primary-rgb: 90, 85, 178;
+    --bs-primary-dark: #4d499e; /* درجة أغمق للاستخدام الداخلي */
+    --bs-success: #198754;
+    --bs-warning: #ffc107;
+    --bs-dark: #212529;
+}
+
 body {
-  font-family: "Tajawal", sans-serif;
-  background-color: #f8f9fa;
+    font-family: 'Tajawal', sans-serif;
+    text-align: right;
+    direction: rtl;
+    background-color: #ffffff; /* خلفية بيضاء نظيفة */
+    color: var(--bs-dark);
 }
 
-.hero-gradient {
-  background-image: url("https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg");
-  background-size: cover;
-  background-position: center;
-  position: relative;
+/* NAVBAR & Logo */
+.logo-text {
+    color: var(--bs-primary) !important;
+    transition: color 0.3s ease;
 }
 
-.hero-gradient::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-.hero-gradient {
-  background-image: url("https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg");
-  background-size: cover;
-  background-position: center;
-  position: relative;
+.logo-text:hover {
+    color: var(--bs-primary-dark) !important;
 }
 
-.hero-gradient::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-}
-.stat-icon {
-  width: 70px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-#characters {
-  background: #f8f9fa;
+.navbar .nav-link {
+    font-size: 1.05rem;
+    color: var(--bs-dark);
+    transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--bs-primary) !important;
+    border-bottom: 2px solid var(--bs-primary);
+}
+
+
+/* HERO SECTION - Dynamic Background & Overlay */
+.hero-section {
+    background-color: #5a55b2;
+    background-image: linear-gradient(135deg, #5a55b2 0%, #4d499e 100%);
+    position: relative;
+    padding: 8rem 0; /* مساحة أكبر للـ Hero */
+    overflow: hidden; /* إخفاء أي تجاوزات جمالية */
+}
+
+/* White outline button in Hero */
+.btn-outline-white {
+    color: white;
+    border-color: white;
+}
+
+.btn-outline-white:hover {
+    color: var(--bs-primary-dark);
+    background-color: white;
+    border-color: white;
+}
+
+.text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Main Call to Action Button */
+.main-cta {
+    background-color: var(--bs-warning);
+    border-color: var(--bs-warning);
+    color: var(--bs-dark);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2) !important;
+    background-color: #ffda6a; /* درجة أفتح عند المرور */
+    border-color: #ffda6a;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2.2rem;
+    color: var(--bs-dark);
+    /* خط تحت العنوان لزيادة الوضوح */
+    border-bottom: 4px solid var(--bs-warning);
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Benefit Cards (New Section) */
+.benefit-card {
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05) !important;
+    border-color: var(--bs-primary);
+    transform: translateY(-5px);
+}
+
+/* Stat Cards */
+.stat-card {
+    transition: all 0.3s ease;
+    border-radius: 0.5rem !important;
+    border: 1px solid #e9ecef !important;
+    border-right: none !important; /* لإزالة حدود الأكتاف */
+}
+
+.stat-card:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-3px);
+}
+
+/* Challenge Cards & App Cards - Unified Look */
+.challenge-card {
+    border-radius: 1rem !important;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid #f1f1f1;
+}
+
+.challenge-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Challenge Card Image Styling */
+.challenge-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.challenge-card:hover .card-img-top {
+    transform: scale(1.05); /* تكبير الصورة قليلاً عند المرور */
+}
+
+/* Challenge Buttons */
+.challenge-btn {
+    transition: background-color 0.3s ease;
+}
+
+/* Character Cards */
 .character-card {
-  transition: 0.4s;
-  border-radius: 18px;
+    border-radius: 1rem !important;
+    text-align: center;
+    border: 1px solid #e9ecef;
 }
 
-.character-card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+.character-card .card-img-top {
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 50% !important;
+    margin-top: 10px;
+    border: 4px solid var(--bs-light);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
 }
 
-.character-card img {
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
+.character-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    border-radius: 1rem !important;
+    border: 1px solid #e9ecef;
+}
+
+/* Footer Links */
+.footer-link:hover {
+    color: var(--bs-white) !important;
+    transition: color 0.3s ease;
+}
+
+.hover-primary:hover {
+    color: var(--bs-primary) !important;
 }

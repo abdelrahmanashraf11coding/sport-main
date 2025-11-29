@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="recipe-detail-title">تفاصيل الوصفة - لياقتك</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .header-bg {
+            /* استخدم صورة الوصفة كخلفية */
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .header-bg::before {
+            /* تظليل لزيادة وضوح النص */
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .card-details {
+            margin-top: -100px;
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-primary fw-bold" href="#">لياقتك</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link" href="nutrition.html">العودة للتغذية</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="header-bg" id="recipe-header-bg">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold position-relative" id="recipe-name">جارِ التحميل...</h1>
+        </div>
+    </section>
+
+    <div class="container card-details">
+        <div class="card shadow-lg p-4">
+            <div class="row">
+                <div class="col-md-7 mb-4 mb-md-0">
+                    <h2 class="mb-3 text-primary" id="recipe-title-body"></h2>
+                    <p class="lead" id="recipe-description"></p>
+
+                    <hr>
+
+                    <h4 class="mt-4">طريقة التحضير (فيديو):</h4>
+                    <div class="ratio ratio-16x9 rounded-3 shadow-sm mb-4">
+                        <iframe id="detail-video" src="" title="فيديو الوصفة"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <a href="#" class="btn btn-success btn-lg w-100">تحميل ملف PDF للوصفة</a>
+                </div>
+
+                <div class="col-md-5">
+                    <h4 class="mb-3">مكونات الوصفة:</h4>
+                    <ul class="list-group" id="ingredients-list">
+                        <li class="list-group-item">كيلو كينوا مطبوخة</li>
+                        <li class="list-group-item">1 حبة أفوكادو مقطعة</li>
+                        <li class="list-group-item">طماطم كرزية</li>
+                        <li class="list-group-item">بصل أحمر شرائح</li>
+                        <li class="list-group-item">عصير ليمون وزيت زيتون</li>
+                    </ul>
+
+                    <h4 class="mt-4 mb-3">معلومات غذائية (تقديرية):</h4>
+                    <div class="card bg-light p-3">
+                        <p class="mb-1"><strong>السعرات الحرارية:</strong> <span class="fw-bold text-danger">350</span>
+                            سعر حراري</p>
+                        <p class="mb-1"><strong>البروتين:</strong> <span class="fw-bold text-success">12 جرام</span></p>
+                        <p class="mb-0"><strong>الدهون الصحية:</strong> <span class="fw-bold text-info">15 جرام</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./nutrition data.js"></script>
+    <script>
+        // دالة للحصول على قيمة من رابط URL (Query Parameter)
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // 1. الحصول على ID الوصفة من الرابط
+        const recipeId = getQueryParam('id');
+        // 2. البحث عن تفاصيل الوصفة في مصفوفة 'recipes'
+        const recipeDetails = recipes.find(rec => rec.id === parseInt(recipeId));
+
+        // تعريف العناصر
+        const recipeHeaderBg = document.getElementById('recipe-header-bg');
+        const recipeName = document.getElementById('recipe-name');
+        const recipeTitleBody = document.getElementById('recipe-title-body');
+        const recipeDescription = document.getElementById('recipe-description');
+        const videoIframe = document.getElementById('detail-video');
+
+        if (recipeDetails) {
+            // تحديث العناصر ببيانات الوصفة
+            document.getElementById('recipe-detail-title').textContent = recipeDetails.title + ' - لياقتك';
+            recipeName.textContent = recipeDetails.title;
+            recipeTitleBody.textContent = recipeDetails.title;
+            recipeDescription.textContent = recipeDetails.desc;
+
+            // تعيين صورة الخلفية
+            recipeHeaderBg.style.backgroundImage = `url('${recipeDetails.img}')`;
+
+            // عرض الفيديو
+            if (recipeDetails.videoUrl) {
+                videoIframe.src = recipeDetails.videoUrl;
+            } else {
+                // رسالة في حال عدم توفر فيديو
+                videoIframe.style.display = 'none';
+                document.querySelector('.ratio').innerHTML = '<div class="alert alert-warning">لا يوجد فيديو توضيحي لهذه الوصفة حاليًا.</div>';
+            }
+
+        } else {
+            // التعامل مع حالة عدم العثور على الوصفة
+            recipeName.textContent = 'عفواً، لم يتم العثور على الوصفة.';
+            document.querySelector('.card-details .card').innerHTML = '<div class="alert alert-danger text-center">خطأ: لم يتم تحديد الوصفة أو أنها غير موجودة.</div>';
+        }
+    </script>
+</body>
+
+</html>

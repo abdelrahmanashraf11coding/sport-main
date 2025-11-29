@@ -2,476 +2,415 @@
 <html lang="ar" dir="rtl">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>تطبيق لياقتك</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>تطبيق لياقتك - الصفحة الرئيسية</title>
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 
 
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
-    <div class="container">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 sticky-top">
+        <div class="container">
 
-      <a class="navbar-brand fs-3 fw-bold text-primary" href="#">لياقتك</a>
+            <a class="navbar-brand fs-3 fw-bold logo-text" href="#">
+                <i class="bi bi-fire text-warning"></i> لياقتك
+            </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-      <div class="collapse navbar-collapse" id="mainMenu">
+            <div class="collapse navbar-collapse" id="mainMenu">
 
-        <!-- Middle Links -->
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3 text-center">
-          <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">الرئيسية</a></li>
-          <li class="nav-item"><a class="nav-link fw-semibold" href="nutrition.html">التغذية</a></li>
-          <li class="nav-item"><a class="nav-link fw-semibold" href="exercise.html">التمرين</a></li>
-          <li class="nav-item"><a class="nav-link fw-semibold" href="trainer.html">المدرب الآلي</a></li>
-          <li class="nav-item"><a class="nav-link fw-semibold" href="admin-dashboard.html">لوحة التحكم</a></li>
-        </ul>
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3 text-center">
+                    <li class="nav-item"><a class="nav-link fw-semibold active" aria-current="page" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="nutrition.html">التغذية</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="exercise.html">التمرين</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="trainer.html">المدرب الآلي</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="admin-dashboard.html">لوحة التحكم</a></li>
+                </ul>
 
-        <!-- Buttons -->
-        <div class="d-flex gap-2 mt-3 mt-lg-0">
-          <a href="login.html" class="btn btn-primary px-4 rounded-pill fw-bold">تسجيل الدخول</a>
-          <a href="register.html" class="btn btn-success px-4 rounded-pill fw-bold">إنشاء حساب</a>
-        </div>
-
-      </div>
-    </div>
-  </nav>
-
-
-  <!-- قسم البطل -->
-  <!-- HERO SECTION -->
-  <section class="hero-gradient text-white py-5">
-    <div class="container position-relative" style="z-index: 5;">
-      <div class="row align-items-center">
-
-        <!-- Text Content -->
-        <div class="col-lg-6 text-center text-lg-start">
-          <h1 class="display-4 fw-bold mb-3">
-            اهتم بصحتك مع <span class="text-warning">لياقتك</span>
-          </h1>
-          <p class="lead mb-4">
-            نظام شامل يساعدك في حساب السعرات – متابعة التمرين – استشارات الذكاء الاصطناعي – كل ده في مكان واحد.
-          </p>
-
-          <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
-            <a href="#" class="btn btn-warning btn-lg px-4 fw-bold rounded-pill">ابدأ الآن</a>
-            <a href="#" class="btn btn-outline-light btn-lg px-4 fw-bold rounded-pill">اعرف أكثر</a>
-          </div>
-        </div>
-
-        <!-- Hero Image -->
-        <div class="col-lg-6 mt-4 mt-lg-0 text-center">
-          <img src="https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg"
-            class="img-fluid rounded-4 shadow-lg" alt="Fitness Image">
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- قسم الإحصائيات -->
-  <!-- STATS SECTION -->
-  <section class="py-5 bg-light">
-    <div class="container">
-
-      <h2 class="text-center fw-bold mb-5">إحصائيات التطبيق</h2>
-
-      <div class="row g-4">
-
-        <!-- Stat 1 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="card text-center shadow-sm p-4 border-0 rounded-4">
-            <div class="stat-icon bg-primary bg-opacity-10 text-primary mx-auto mb-3">
-              <i class="bi bi-people-fill fs-2"></i>
-            </div>
-            <h3 class="fw-bold mb-1">25,000+</h3>
-            <p class="text-muted mb-0">مستخدم نشط</p>
-          </div>
-        </div>
-
-        <!-- Stat 2 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="card text-center shadow-sm p-4 border-0 rounded-4">
-            <div class="stat-icon bg-success bg-opacity-10 text-success mx-auto mb-3">
-              <i class="bi bi-check-circle-fill fs-2"></i>
-            </div>
-            <h3 class="fw-bold mb-1">8,500+</h3>
-            <p class="text-muted mb-0">خطة ناجحة</p>
-          </div>
-        </div>
-
-        <!-- Stat 3 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="card text-center shadow-sm p-4 border-0 rounded-4">
-            <div class="stat-icon bg-warning bg-opacity-10 text-warning mx-auto mb-3">
-              <i class="bi bi-lightning-charge-fill fs-2"></i>
-            </div>
-            <h3 class="fw-bold mb-1">12,000+</h3>
-            <p class="text-muted mb-0">تمرين منجز</p>
-          </div>
-        </div>
-
-        <!-- Stat 4 -->
-        <div class="col-md-6 col-lg-3">
-          <div class="card text-center shadow-sm p-4 border-0 rounded-4">
-            <div class="stat-icon bg-danger bg-opacity-10 text-danger mx-auto mb-3">
-              <i class="bi bi-heart-pulse-fill fs-2"></i>
-            </div>
-            <h3 class="fw-bold mb-1">98%</h3>
-            <p class="text-muted mb-0">رضا المستخدمين</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Bootstrap icons CDN -->
-
-
-  <!-- قسم التحديات -->
-  <!-- CHALLENGES SECTION -->
-  <section class="py-5">
-    <div class="container">
-
-      <h2 class="text-center fw-bold mb-4">تحديات لياقتك</h2>
-      <p class="text-center text-muted mb-5">
-        اختار التحدي اللي يناسب هدفك وابدأ دلوقتي رحلتك للياقة أفضل.
-      </p>
-
-      <div class="row g-4">
-
-        <!-- Challenge 1 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card shadow-sm border-0 rounded-4 h-100">
-            <img src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg"
-              class="card-img-top rounded-top-4" alt="ch1">
-
-            <div class="card-body">
-              <h4 class="fw-bold mb-2">تحدي إنقاص الوزن</h4>
-              <p class="text-muted">
-                برنامج لمدة 30 يوم لحرق الدهون وتحسين شكل الجسم بطرق علمية.
-              </p>
-              <a href="#" class="btn btn-primary w-100 fw-bold rounded-pill">ابدأ التحدي</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Challenge 2 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card shadow-sm border-0 rounded-4 h-100">
-            <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg"
-              class="card-img-top rounded-top-4" alt="ch2">
-
-            <div class="card-body">
-              <h4 class="fw-bold mb-2">تحدي بناء العضلات</h4>
-              <p class="text-muted">
-                جدول تمارين مكثف + خطة تغذية لزيادة الكتلة العضلية بشكل صحي.
-              </p>
-              <a href="#" class="btn btn-primary w-100 fw-bold rounded-pill">ابدأ التحدي</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Challenge 3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card shadow-sm border-0 rounded-4 h-100">
-            <img src="https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg"
-              class="card-img-top rounded-top-4" alt="ch3">
-
-            <div class="card-body">
-              <h4 class="fw-bold mb-2">تحدي اللياقة الشاملة</h4>
-              <p class="text-muted">
-                مزج بين تمارين القوة، الكارديو، والمرونة لتحسين لياقتك بالكامل.
-              </p>
-              <a href="#" class="btn btn-primary w-100 fw-bold rounded-pill">ابدأ التحدي</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- قسم الشخصيات -->
-  <section id="characters" class="py-5">
-    <div class="container text-center">
-      <h2 class="fw-bold mb-4">الشخصيات</h2>
-      <p class="mb-5 text-muted">تعرف على أهم الشخصيات التي لها دور في النظام المقترح</p>
-
-      <div class="row g-4">
-
-        <!-- Character 1 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm border-0 character-card">
-            <img src="https://i.ibb.co/8sKJtGx/char1.png" class="card-img-top" alt="character">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">المدير العام</h5>
-              <p class="card-text text-muted">
-                يتحكم في جميع أجزاء النظام، ولديه صلاحيات كاملة لرؤية التقارير والتحليلات.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Character 2 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm border-0 character-card">
-            <img src="https://i.ibb.co/qjx8LXL/char2.png" class="card-img-top" alt="character">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">مدير الموارد البشرية</h5>
-              <p class="card-text text-muted">
-                مسؤول عن الموظفين، الحضور والانصراف، وإدارة الملفات الخاصة بهم.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Character 3 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm border-0 character-card">
-            <img src="https://i.ibb.co/hg0L8Lj/char3.png" class="card-img-top" alt="character">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">المحاسب</h5>
-              <p class="card-text text-muted">
-                يقوم بإدارة المصروفات والرواتب والفواتير داخل النظام بشكل يومي.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- قسم التطبيق -->
-  <section id="app" class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="fw-bold mb-4">التطبيق</h2>
-      <p class="mb-5 text-muted">استعرض وظائف التطبيق وكيفية التفاعل مع النظام المقترح</p>
-
-      <div class="row g-4">
-
-        <!-- Feature 1 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm border-0 app-card">
-            <img src="https://i.ibb.co/Y2WcK6T/app1.png" class="card-img-top" alt="feature">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">واجهة سهلة الاستخدام</h5>
-              <p class="card-text text-muted">
-                تصميم بسيط وسلس يسمح بالوصول لكل الوظائف بسرعة وكفاءة.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Feature 2 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm border-0 app-card">
-            <img src="https://i.ibb.co/k4q8F7C/app2.png" class="card-img-top" alt="feature">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">تقارير وتحليلات</h5>
-              <p class="card-text text-muted">
-                يمكن للمستخدم الاطلاع على كل التقارير والبيانات الهامة من خلال التطبيق.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm border-0 app-card">
-            <img src="https://i.ibb.co/4VRzwHt/app3.png" class="card-img-top" alt="feature">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">إشعارات وتنبيهات</h5>
-              <p class="card-text text-muted">
-                التطبيق يرسل تنبيهات فورية لكل المستجدات المهمة داخل النظام.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- قسم آراء المستخدمين -->
-  <section id="testimonials" class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="fw-bold mb-4">آراء المستخدمين</h2>
-      <p class="mb-5 text-muted">تعرف على آراء بعض المستخدمين الذين جربوا النظام المقترح</p>
-
-      <div class="row g-4">
-
-        <!-- Testimonial 1 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm border-0 testimonial-card p-3">
-            <img src="https://i.ibb.co/4SRwV2R/user1.jpg" class="rounded-circle mx-auto d-block mb-3" width="80"
-              height="80" alt="user">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">أحمد علي</h5>
-              <p class="card-text text-muted">
-                "النظام سهل الاستخدام ويوفر الوقت بشكل كبير. أحببت التقارير والتحليلات التي يقدمها."
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 2 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm border-0 testimonial-card p-3">
-            <img src="https://i.ibb.co/WtG7QXK/user2.jpg" class="rounded-circle mx-auto d-block mb-3" width="80"
-              height="80" alt="user">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">سارة محمود</h5>
-              <p class="card-text text-muted">
-                "من أفضل الأنظمة التي جربتها لإدارة الموارد البشرية. كل شيء مرتب وسهل الفهم."
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm border-0 testimonial-card p-3">
-            <img src="https://i.ibb.co/6Xr6M2R/user3.jpg" class="rounded-circle mx-auto d-block mb-3" width="80"
-              height="80" alt="user">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">محمد حسن</h5>
-              <p class="card-text text-muted">
-                "التطبيق يساعدنا على متابعة كل شيء بسهولة، والتنبيهات اللحظية ميزة رائعة جدًا."
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- نافذة تسجيل الدخول / إنشاء حساب -->
-  <!-- زر لفتح المودال -->
-  <div class="text-center mt-5 p-4">
-    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#authModal">
-      تسجيل الدخول / إنشاء حساب
-    </button>
-  </div>
-
-  <!-- نافذة المودال -->
-  <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header border-0">
-          <ul class="nav nav-tabs w-100 justify-content-center" id="authTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login-form"
-                type="button" role="tab">تسجيل الدخول</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup-form" type="button"
-                role="tab">إنشاء حساب</button>
-            </li>
-          </ul>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="tab-content">
-            <!-- نموذج تسجيل الدخول -->
-            <div class="tab-pane show active" id="login-form" role="tabpanel">
-              <form>
-                <div class="mb-3 input-group">
-                  <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
-                  <input type="email" class="form-control" placeholder="example@mail.com">
+                <div class="d-flex gap-2 mt-3 mt-lg-0">
+                    <a href="login.html" class="btn btn-outline-dark px-4 rounded-pill fw-bold">تسجيل الدخول</a>
+                    <a href="register.html" class="btn btn-primary px-4 rounded-pill fw-bold">إنشاء حساب</a>
                 </div>
-                <div class="mb-3 input-group">
-                  <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
-                  <input type="password" class="form-control" placeholder="*******">
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+
+    <header class="hero-section text-white py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 text-center text-lg-start animate__animated animate__fadeInRight">
+                    <span class="badge text-bg-warning mb-3 py-2 px-3 fw-bold">💪 صحتك أولاً</span>
+                    <h1 class="display-3 fw-bolder mb-3">
+                        ابدأ تحولك الصحي مع <span class="text-primary-dark">تطبيق لياقتك</span>
+                    </h1>
+                    <p class="lead mb-4 fw-light text-shadow-sm">
+                        نظام شامل لمتابعة السعرات، خطط تمارين مخصصة، وإرشاد فوري بواسطة الذكاء الاصطناعي لتصل لأهدافك بسرعة.
+                    </p>
+
+                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#app" class="btn btn-primary btn-lg px-5 fw-bold rounded-pill shadow-lg main-cta">
+                            ابدأ رحلة التحول الآن <i class="bi bi-arrow-left"></i>
+                        </a>
+                        <a href="#features" class="btn btn-outline-white btn-lg px-5 fw-bold rounded-pill border-2">
+                            تعرف على الميزات
+                        </a>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary w-100">دخول</button>
-              </form>
+
+                <div class="col-lg-6 mt-5 mt-lg-0 text-center animate__animated animate__fadeInLeft">
+                    <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="img-fluid rounded-4 shadow-lg" alt="شخص يمارس الرياضة في الجيم">
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    ---
+    <!-- Features -->
+
+    <section class="py-5" id="features">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5 section-title">لماذا "لياقتك" هو خيارك الأفضل؟ ✨</h2>
+
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="benefit-card shadow-sm p-4 h-100 rounded-4">
+                        <i class="bi bi-calculator-fill display-4 text-primary mb-3"></i>
+                        <h4 class="fw-bold mb-2">حساب سعرات دقيق</h4>
+                        <p class="text-muted">مكتبة طعام ضخمة لحساب السعرات والعناصر الغذائية لكل وجبة تتناولها.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="benefit-card shadow-sm p-4 h-100 rounded-4">
+                        <i class="bi bi-robot display-4 text-success mb-3"></i>
+                        <h4 class="fw-bold mb-2">مدرب آلي بالذكاء الاصطناعي</h4>
+                        <p class="text-muted">يقدم إرشادات فورية وخطة تمرين تتكيف مع مستوى تقدمك اليومي.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="benefit-card shadow-sm p-4 h-100 rounded-4">
+                        <i class="bi bi-graph-up display-4 text-warning mb-3"></i>
+                        <h4 class="fw-bold mb-2">تتبع وتقرير شامل</h4>
+                        <p class="text-muted">رسوم بيانية واضحة لمتابعة وزنك، تقدمك، وإنجازاتك في مكان واحد.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    ---
+<!-- Stats -->
+    <section class="py-5 bg-light" id="stats">
+        <div class="container">
+
+            <h2 class="text-center fw-bold mb-5 section-title">إحصائيات النجاح 📈</h2>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card text-center shadow-sm p-4 border-start border-4 stat-card h-100 border-primary">
+                        <div class="stat-icon text-primary mx-auto mb-3">
+                            <i class="bi bi-people-fill fs-1"></i>
+                        </div>
+                        <h3 class="fw-bold mb-1 display-5 text-primary">25,000+</h3>
+                        <p class="text-muted mb-0 fw-semibold">مستخدم نشط</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card text-center shadow-sm p-4 border-start border-4 stat-card h-100 border-success">
+                        <div class="stat-icon text-success mx-auto mb-3">
+                            <i class="bi bi-check-circle-fill fs-1"></i>
+                        </div>
+                        <h3 class="fw-bold mb-1 display-5 text-success">8,500+</h3>
+                        <p class="text-muted mb-0 fw-semibold">خطة ناجحة</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card text-center shadow-sm p-4 border-start border-4 stat-card h-100 border-warning">
+                        <div class="stat-icon text-warning mx-auto mb-3">
+                            <i class="bi bi-lightning-charge-fill fs-1"></i>
+                        </div>
+                        <h3 class="fw-bold mb-1 display-5 text-warning">12,000+</h3>
+                        <p class="text-muted mb-0 fw-semibold">تمرين منجز</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="card text-center shadow-sm p-4 border-start border-4 stat-card h-100 border-info">
+                        <div class="stat-icon text-info mx-auto mb-3">
+                            <i class="bi bi-heart-pulse-fill fs-1"></i>
+                        </div>
+                        <h3 class="fw-bold mb-1 display-5 text-info">98%</h3>
+                        <p class="text-muted mb-0 fw-semibold">رضا المستخدمين</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    ---
+<!-- Challenges -->
+    <section class="py-5" id="challenges">
+        <div class="container">
+
+            <h2 class="text-center fw-bold mb-4 section-title">تحديات لياقتك المميزة 💪</h2>
+            <p class="text-center text-muted mb-5 lead">
+                اختر التحدي الذي يناسب هدفك وابدأ في تحقيق نتائج حقيقية معنا.
+            </p>
+
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card challenge-card shadow-lg border-0 rounded-4 h-100 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3762804/pexels-photo-3762804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                            class="card-img-top" alt="تحدي إنقاص الوزن">
+
+                        <div class="card-body p-4">
+                            <span class="badge text-bg-primary mb-2">30 يوم</span>
+                            <h4 class="fw-bold mb-2">تحدي إنقاص الوزن</h4>
+                            <p class="text-muted">برنامج لحرق الدهون وتحسين شكل الجسم بطرق علمية ومثبتة.</p>
+                            <a href="exercise.html" class="btn btn-primary w-100 fw-bold rounded-pill mt-3 challenge-btn">ابدأ التحدي</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card challenge-card shadow-lg border-0 rounded-4 h-100 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/416484/pexels-photo-416484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="تحدي بناء العضلات">
+
+                        <div class="card-body p-4">
+                            <span class="badge text-bg-success mb-2">6 أسابيع</span>
+                            <h4 class="fw-bold mb-2">تحدي بناء العضلات</h4>
+                            <p class="text-muted">جدول تمارين مكثف وخطة تغذية لزيادة الكتلة العضلية بشكل صحي.</p>
+                            <a href="exercise.html" class="btn btn-success w-100 fw-bold rounded-pill mt-3 challenge-btn">ابدأ التحدي</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card challenge-card shadow-lg border-0 rounded-4 h-100 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/10323363/pexels-photo-10323363.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="تحدي اللياقة الشاملة">
+
+                        <div class="card-body p-4">
+                            <span class="badge text-bg-warning mb-2">4 أسابيع</span>
+                            <h4 class="fw-bold mb-2">تحدي اللياقة الشاملة</h4>
+                            <p class="text-muted">مزيج من القوة والكارديو والمرونة لتحسين لياقتك بالكامل ومضاعفة طاقتك.</p>
+                            <a href="exercise.html" class="btn btn-warning w-100 fw-bold rounded-pill mt-3 challenge-btn text-white">ابدأ التحدي</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- نموذج إنشاء حساب -->
-            <div class="tab-pane" id="signup-form" role="tabpanel">
-              <form>
-                <div class="mb-3 input-group">
-                  <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
-                  <input type="text" class="form-control" placeholder="أدخل اسمك">
-                </div>
-                <div class="mb-3 input-group">
-                  <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
-                  <input type="email" class="form-control" placeholder="example@mail.com">
-                </div>
-                <div class="mb-3 input-group">
-                  <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
-                  <input type="password" class="form-control" placeholder="*******">
-                </div>
-                <button type="submit" class="btn btn-success w-100">إنشاء حساب</button>
-              </form>
+            <div class="col-12 text-center mt-5">
+                <a href="exercise.html" class="btn btn-outline-dark btn-lg px-5 rounded-pill fw-bold border-2 more-challenges-btn">
+                    عرض كل التحديات <i class="bi bi-arrow-left"></i>
+                </a>
             </div>
-          </div>
+
+
         </div>
-      </div>
+    </section>
+
+    ---
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4 section-title">ماذا قالوا عنا؟ 💬</h2>
+            <p class="mb-5 text-muted lead">قصص نجاح من مستخدمينا الذين اعتمدوا على "لياقتك"</p>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0 testimonial-card p-4 h-100">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="rounded-circle mx-auto d-block mb-3 border border-3 border-primary" width="80" height="80" alt="أحمد علي">
+                        <div class="card-body p-0">
+                            <h5 class="card-title fw-bold">أحمد علي</h5>
+                            <span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
+                            <p class="card-text text-muted mt-2">"النظام سهل الاستخدام ويوفر الوقت بشكل كبير. أحببت المدرب الآلي، غير نظرتي للياقة."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0 testimonial-card p-4 h-100">
+                        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="rounded-circle mx-auto d-block mb-3 border border-3 border-success" width="80" height="80" alt="سارة محمود">
+                        <div class="card-body p-0">
+                            <h5 class="card-title fw-bold">سارة محمود</h5>
+                            <span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
+                            <p class="card-text text-muted mt-2">"التطبيق الأفضل لمتابعة السعرات والتمارين. ساعدني في الالتزام بأهدافي وتحقيق نتائج مذهلة."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0 testimonial-card p-4 h-100">
+                        <img src="https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="rounded-circle mx-auto d-block mb-3 border border-3 border-warning" width="80" height="80" alt="محمد حسن">
+                        <div class="card-body p-0">
+                            <h5 class="card-title fw-bold">محمد حسن</h5>
+                            <span class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
+                            <p class="card-text text-muted mt-2">"تحدياتهم محفزة جداً وواجهة المستخدم مريحة للعين وسهلة في إدخال البيانات."</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    ---
+<!-- Team Section -->
+    <section id="characters" class="py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4 section-title">فريق العمل 🧑‍💼</h2>
+            <p class="mb-5 text-muted lead">تعرف على أهم الشخصيات التي تقف وراء نجاح "لياقتك"</p>
+
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-md-4 col-lg-3">
+                    <div class="card shadow-sm border-0 character-card p-3 h-100">
+                        <img src="https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top rounded-circle mx-auto mb-3" alt="المدير العام">
+                        <div class="card-body p-0">
+                            <h5 class="card-title fw-bold text-primary">المدير العام</h5>
+                            <p class="card-text text-muted small">يضع الرؤية ويتحكم في جميع أجزاء النظام، القائد الرئيسي للتحول.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3">
+                    <div class="card shadow-sm border-0 character-card p-3 h-100">
+                        <img src="https://images.pexels.com/photos/1097203/pexels-photo-1097203.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top rounded-circle mx-auto mb-3" alt="مدير الموارد البشرية">
+                        <div class="card-body p-0">
+                            <h5 class="card-title fw-bold text-success">مدير الموارد البشرية</h5>
+                            <p class="card-text text-muted small">مسؤول عن الموظفين، إدارة الملفات، والتدريب على استخدام النظام.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3">
+                    <div class="card shadow-sm border-0 character-card p-3 h-100">
+                        <img src="https://images.pexels.com/photos/6280453/pexels-photo-6280453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top rounded-circle mx-auto mb-3" alt="المحاسب">
+                        <div class="card-body p-0">
+                            <h5 class="card-title fw-bold text-warning">المحاسب</h5>
+                            <p class="card-text text-muted small">يقوم بإدارة المصروفات، الرواتب، وكل الأمور المالية المتعلقة بالتطبيق.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    ---
+<!-- Authentication Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow-lg">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-primary" id="authModalLabel">ابدأ رحلتك الآن</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-header border-0 pt-0">
+                    <ul class="nav nav-pills w-100 justify-content-center" id="authTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active fw-bold rounded-pill mx-1" id="login-tab" data-bs-toggle="tab" data-bs-target="#login-form" type="button" role="tab">تسجيل الدخول</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link fw-bold rounded-pill mx-1" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup-form" type="button" role="tab">إنشاء حساب</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <div class="tab-content">
+                        <div class="tab-pane show active" id="login-form" role="tabpanel">
+                            <form>
+                                <div class="mb-3 input-group input-group-lg">
+                                    <span class="input-group-text"><i class="bi bi-envelope-fill text-muted"></i></span>
+                                    <input type="email" class="form-control rounded-end-3" placeholder="البريد الإلكتروني">
+                                </div>
+                                <div class="mb-3 input-group input-group-lg">
+                                    <span class="input-group-text"><i class="bi bi-lock-fill text-muted"></i></span>
+                                    <input type="password" class="form-control rounded-end-3" placeholder="كلمة المرور">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 btn-lg fw-bold mt-2 rounded-pill">تسجيل الدخول</button>
+                                <p class="text-center mt-3"><a href="#" class="text-secondary text-decoration-none small">نسيت كلمة المرور؟</a></p>
+                            </form>
+                        </div>
+
+                        <div class="tab-pane" id="signup-form" role="tabpanel">
+                            <form>
+                                <div class="mb-3 input-group input-group-lg">
+                                    <span class="input-group-text"><i class="bi bi-person-fill text-muted"></i></span>
+                                    <input type="text" class="form-control rounded-end-3" placeholder="الاسم بالكامل">
+                                </div>
+                                <div class="mb-3 input-group input-group-lg">
+                                    <span class="input-group-text"><i class="bi bi-envelope-fill text-muted"></i></span>
+                                    <input type="email" class="form-control rounded-end-3" placeholder="البريد الإلكتروني">
+                                </div>
+                                <div class="mb-3 input-group input-group-lg">
+                                    <span class="input-group-text"><i class="bi bi-lock-fill text-muted"></i></span>
+                                    <input type="password" class="form-control rounded-end-3" placeholder="كلمة المرور">
+                                </div>
+                                <button type="submit" class="btn btn-success w-100 btn-lg fw-bold mt-2 rounded-pill">إنشاء حساب</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- تذييل الصفحة -->
-  <footer class="bg-dark text-light py-5">
-    <div class="container">
-      <!-- القسم العلوي -->
-      <div class="row align-items-center mb-4">
-        <!-- الشعار والوصف -->
-        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-          <img
-            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e094815b-9b52-425c-bab1-92df17446a67.png"
-            alt="شعار تطبيق لياقتك" class="img-fluid" style="height:50px;">
-          <p class="text-secondary mt-2 mb-0">تطبيق لياقتك - اجعل لياقتك ممتعة ومليئة بالتحديات!</p>
+    ---
+<!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row align-items-center mb-4">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <a class="navbar-brand fs-3 fw-bold logo-text text-white" href="#">
+                        <i class="bi bi-fire text-warning"></i> لياقتك
+                    </a>
+                    <p class="text-secondary mt-2 mb-0 small">تطبيق لياقتك - اجعل لياقتك ممتعة ومليئة بالتحديات!</p>
+                </div>
+
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="index.html" class="text-secondary text-decoration-none mx-2 footer-link">الرئيسية</a>
+                    <a href="nutrition.html" class="text-secondary text-decoration-none mx-2 footer-link">التغذية</a>
+                    <a href="exercise.html" class="text-secondary text-decoration-none mx-2 footer-link">التمرين</a>
+                    <a href="trainer.html" class="text-secondary text-decoration-none mx-2 footer-link">المدرب الآلي</a>
+                </div>
+            </div>
+
+            <div class="border-top border-secondary pt-3 text-center">
+                <p class="text-secondary small mb-2">© 2025 تطبيق لياقتك. جميع الحقوق محفوظة.</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#" class="text-secondary fs-5 hover-primary"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-secondary fs-5 hover-primary"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-secondary fs-5 hover-primary"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
         </div>
+    </footer>
 
-        <!-- الروابط -->
-        <div class="col-md-6 text-center text-md-end">
-          <a href="#hero" class="text-secondary text-decoration-none mx-2">الصفحة الرئيسية</a>
-          <a href="#challenges" class="text-secondary text-decoration-none mx-2">التحديات</a>
-          <a href="#stats" class="text-secondary text-decoration-none mx-2">الإنجازات</a>
-          <a href="exercise.html" class="text-secondary text-decoration-none mx-2">التمرين</a>
-        </div>
-      </div>
-
-      <!-- القسم السفلي -->
-      <div class="border-top border-secondary pt-3 text-center">
-        <p class="text-secondary small mb-2">© 2025 تطبيق لياقتك. جميع الحقوق محفوظة.</p>
-        <div class="d-flex justify-content-center gap-3">
-          <!-- أيقونات وسائل التواصل الاجتماعي -->
-          <a href="#" class="text-secondary fs-5"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="text-secondary fs-5"><i class="bi bi-linkedin"></i></a>
-          <a href="#" class="text-secondary fs-5"><i class="bi bi-instagram"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- سكريبتات جافاسكريبت -->
-  <script src="./script.js"></script>
-
-    <!-- Bootstrap JS + Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

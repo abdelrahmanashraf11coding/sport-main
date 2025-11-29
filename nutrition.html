@@ -2,183 +2,215 @@
 <html lang="ar" dir="rtl">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>صفحة التغذية - تطبيق لياقتك</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <style>
-    body {
-      font-family: 'Tajawal', sans-serif;
-      background-color: #f8f9fa;
-      overflow-x: hidden;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة التغذية - تطبيق لياقتك</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ... (الأنماط كما هي) ... */
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
 
-    .hero-gradient {
-      background: linear-gradient(135deg, #667eea, #764ba2);
-    }
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
 
-    .recipe-card img,
-    .tip-card img,
-    .challenge-card img {
-      height: 200px;
-      object-fit: cover;
-      border-radius: 1rem;
-    }
+        /* تعديل صغير لضبط حدود الصورة */
+        .recipe-card img,
+        .tip-card img,
+        .challenge-card img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 0.375rem 0.375rem 0 0;
+            /* Bootstrap default border-radius */
+        }
 
-    .btn-purple {
-      background-color: #6f42c1;
-      /* بنفسجي Bootstrap-style */
-      color: #fff;
-    }
+        /* إزالة تأثير التكبير من الرابط، لأنه سيكون فقط على زر الفيديو أو التفاصيل */
+        .card:hover {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+            /* ظل عادي */
+            transform: none;
+        }
 
-    .btn-purple:hover {
-      background-color: #5936a2;
-      /* داكن شوي على hover */
-      color: #fff;
-    }
-  </style>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+        .btn-purple {
+            background-color: #6f42c1;
+            color: #fff;
+        }
+
+        .btn-purple:hover {
+            background-color: #5936a2;
+            color: #fff;
+        }
+    </style>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Tajawal -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- شريط التنقل -->
-  <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm sticky-top">
-    <div class="container">
-      <a class="navbar-brand text-primary fw-bold" href="#">لياقتك</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav text-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">الصفحة الرئيسية</a></li>
-          <li class="nav-item"><a class="nav-link" href="nutrition.html">التغذية</a></li>
-          <li class="nav-item"><a class="nav-link" href="exercise.html">التمرين</a></li>
-          <li class="nav-item"><a class="nav-link" href="trainer.html">المدرب الآلي</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-primary fw-bold" href="#">لياقتك</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3 text-center">
+                    <li class="nav-item"><a class="nav-link fw-semibold active" href="nutrition.html">التغذية</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold " aria-current="page"
+                            href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="exercise.html">التمرين</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="trainer.html">المدرب الآلي</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="admin-dashboard.html">لوحة التحكم</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <!-- قسم البطل -->
-  <section class="hero-gradient text-white py-5 text-center position-relative"
-    style="background-image: url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg'); background-size: cover; background-position: center;">
-    <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5);"></div>
-    <div class="container position-relative py-5">
-      <h2 class="display-5 fw-bold">نصائح للتغذية الصحية</h2>
-      <p class="lead mb-4">اكتشف طرقاً لتحقيق توازن غذائي يساعدك على الحفاظ على لياقتك وتعزيز صحتك.</p>
-      <div class="d-flex justify-content-center gap-2 flex-wrap">
-        <button class="btn btn-light text-primary fw-bold">حمل التطبيق الآن</button>
-        <button class="btn btn-outline-light fw-bold">تعرف أكثر</button>
-      </div>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-5 text-center position-relative"
+        style="background-image: url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg'); background-size: cover; background-position: center;">
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0,0,0,0.5);"></div>
+        <div class="container position-relative py-5">
+            <h2 class="display-5 fw-bold">نصائح للتغذية الصحية</h2>
+            <p class="lead mb-4">اكتشف طرقاً لتحقيق توازن غذائي يساعدك على الحفاظ على لياقتك وتعزيز صحتك.</p>
+            <div class="d-flex justify-content-center gap-2 flex-wrap">
+                <a href="#tipsContainer" class="btn btn-light text-primary fw-bold">شاهد النصائح</a>
+                <a href="#challengesContainer" class="btn btn-outline-light fw-bold">انضم للتحديات</a>
+                <a href="#recipesContainer" class="btn btn-outline-light fw-bold">تصفح الوصفات</a>
+            </div>
+        </div>
+    </section>
 
-  <!-- قسم النصائح -->
-  <section class="py-5 bg-white">
-    <div class="container">
-      <div class="row" id="tipsContainer">
-        <!-- سيتم توليد الكروت هنا من JSON -->
-      </div>
-    </div>
-  </section>
+    <!-- Tips Section -->
+    <section class="py-5 bg-white" id="tipsContainer">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-4">أفضل نصائحنا الصحية 🥕</h2>
+            <div class="row" id="generatedTipsContainer">
+            </div>
+        </div>
+    </section>
 
-  <!-- قسم الوصفات -->
-  <section class="py-5 m-4 bg-light">
-    <div class="container text-center mb-4">
-      <h2 class="fw-bold mb-3">وصفات صحية</h2>
-      <input id="recipeSearch" class="form-control mx-auto" style="max-width:400px;" placeholder="ابحث عن وصفة...">
-    </div>
-    <div class="row" id="recipesContainer">
-      <!-- سيتم توليد الكروت هنا من JSON -->
-    </div>
-  </section>
+    <!-- Recipes Section -->
+    <section class="py-5 m-4 bg-light" id="recipesContainer">
+        <div class="container text-center mb-4">
+            <h2 class="fw-bold mb-3">وصفات صحية 🍲</h2>
+            <input id="recipeSearch" class="form-control mx-auto" style="max-width:400px;"
+                placeholder="ابحث عن وصفة...">
+        </div>
+        <div class="row" id="generatedRecipesContainer">
+        </div>
+    </section>
+    <!-- Challenges Section -->
+    <section class="py-5 bg-white" id="challengesContainer">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-4">تحديات اللياقة والتغذية 💪</h2>
+            <div class="row" id="generatedChallengesContainer">
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-4 mt-4 text-center">
+        <p class="mb-2">© 2025 تطبيق لياقتك. جميع الحقوق محفوظة.</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="#" class="text-white text-decoration-underline">سياسة الخصوصية</a>
+            <a href="#" class="text-white text-decoration-underline">الشروط والأحكام</a>
+            <a href="#" class="text-white text-decoration-underline">تواصل معنا</a>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
 
-  <!-- قسم التحديات -->
-  <section class="py-5 bg-white">
-    <div class="container">
-      <div class="row" id="challengesContainer">
-        <!-- سيتم توليد الكروت هنا من JSON -->
-      </div>
-    </div>
-  </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./nutrition data.js"></script>
+    <script>
 
-  <!-- Footer -->
-  <footer class="bg-primary text-white py-4 mt-4 text-center">
-    <p class="mb-2">© 2025 تطبيق لياقتك. جميع الحقوق محفوظة.</p>
-    <div class="d-flex justify-content-center gap-3">
-      <a href="#" class="text-white text-decoration-underline">سياسة الخصوصية</a>
-      <a href="#" class="text-white text-decoration-underline">الشروط والأحكام</a>
-      <a href="#" class="text-white text-decoration-underline">تواصل معنا</a>
-    </div>
-  </footer>
+        // ********************* توليد كروت النصائح (بالزر الجديد) *********************
+        const tipsContainer = document.getElementById('generatedTipsContainer'); // حاوية النصائح
+        tips.forEach(tip => {
+            const col = document.createElement('div');
+            col.className = "col-md-6 col-lg-3 mb-4 tip-card";
+            col.innerHTML = `
+            <div class="card h-100 shadow-sm">
+              <img src="${tip.img}" class="card-img-top" alt="${tip.title}">
+              <div class="card-body">
+                <h5 class="card-title">${tip.title}</h5>
+                <p class="card-text">${tip.desc}</p>
+                <a href="tip-details.html?id=${tip.id}" class="btn btn-info w-100 mt-2">اضغط هنا علشان تشوف النصيحه في فيديو</a>
+              </div>
+            </div>`;
+            tipsContainer.appendChild(col);
+        }); // نهاية توليد كروت النصائح
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./nutrition data.js"></script>
-  <script>
-    
-    
-    // توليد كروت النصائح
-    const tipsContainer = document.getElementById('tipsContainer');
-    tips.forEach(tip => {
-      const col = document.createElement('div');
-      col.className = "col-md-6 col-lg-3 mb-4";
-      col.innerHTML = `
-    <div class="card tip-card h-100 shadow-sm">
-      <img src="${tip.img}" class="card-img-top" alt="${tip.title}">
-      <div class="card-body">
-        <h5 class="card-title">${tip.title}</h5>
-        <p class="card-text">${tip.desc}</p>
-      </div>
-    </div>`;
-      tipsContainer.appendChild(col);
-    });
+        // ********************* توليد كروت الوصفات (تم إضافة زر مشاهدة الفيديو) *********************
+        const recipesContainer = document.getElementById('generatedRecipesContainer');
+        recipes.forEach(recipe => {
+            const col = document.createElement('div');
+            col.className = "col-md-4 mb-4 recipe-card";
+            col.innerHTML = `
+            <div class="card h-100 shadow-sm">
+                <img src="${recipe.img}" class="card-img-top" alt="${recipe.title}">
+                <div class="card-body">
+                    <h5 class="card-title">${recipe.title}</h5>
+                    <p class="card-text">${recipe.desc}</p>
+                    <a href="recipe-details.html?id=${recipe.id}" class="btn btn-primary w-100 mt-2">اضغط هنا علشان تشوف الوصفة في فيديو</a>
+                </div>
+            </div>`;
+            recipesContainer.appendChild(col);
+        });
 
-    // توليد كروت الوصفات
-    const recipesContainer = document.getElementById('recipesContainer');
-    recipes.forEach(recipe => {
-      const col = document.createElement('div');
-      col.className = "col-md-4 mb-4 recipe-card";
-      col.innerHTML = `
-    <div class="card h-100 shadow-sm">
-      <img src="${recipe.img}" class="card-img-top" alt="${recipe.title}">
-      <div class="card-body">
-        <h5 class="card-title">${recipe.title}</h5>
-        <p class="card-text">${recipe.desc}</p>
-      </div>
-    </div>`;
-      recipesContainer.appendChild(col);
-    });
+        // ********************* توليد كروت التحديات (تم التعديل ليصبح زرًا واحدًا) *********************
+        const challengesContainer = document.getElementById('generatedChallengesContainer');
+        challenges.forEach(ch => {
+            const col = document.createElement('div');
+            col.className = "col-md-6 mb-4 challenge-card";
+            col.innerHTML = `
+            <div class="card h-100 shadow-sm">
+              <img src="${ch.img}" class="card-img-top" alt="${ch.title}">
+              <div class="card-body">
+                <h5 class="card-title text-${ch.btnClass.includes('primary') ? 'primary' : ch.btnClass.includes('success') ? 'success' : ch.btnClass.includes('danger') ? 'danger' : 'purple'}">${ch.title}</h5>
+                <p class="card-text">${ch.desc}</p>
+                <a href="challenge-details.html?id=${ch.id}" class="btn ${ch.btnClass} w-100 mt-2">${ch.btnText} وشاهد الشرح بالفيديو</a>
+              </div>
+            </div>`;
+            challengesContainer.appendChild(col);
+        });
 
-    // توليد كروت التحديات
-    const challengesContainer = document.getElementById('challengesContainer');
-    challenges.forEach(ch => {
-      const col = document.createElement('div');
-      col.className = "col-md-6 mb-4";
-      col.innerHTML = `
-    <div class="card challenge-card h-100 shadow-sm">
-      <img src="${ch.img}" class="card-img-top" alt="${ch.title}">
-      <div class="card-body">
-        <h5 class="card-title text-${ch.btnClass.includes('primary') ? 'primary' : ch.btnClass.includes('success') ? 'success' : ch.btnClass.includes('danger') ? 'danger' : 'purple'}">${ch.title}</h5>
-        <p class="card-text">${ch.desc}</p>
-        <a href="#" class="btn ${ch.btnClass}">${ch.btnText}</a>
-      </div>
-    </div>`;
-      challengesContainer.appendChild(col);
-    });
+        // ********************* بحث الوصفات *********************
+        const searchInput = document.getElementById("recipeSearch");
+        searchInput.addEventListener("input", function () {
+            const keyword = this.value.toLowerCase();
+            document.querySelectorAll('.recipe-card').forEach(card => {
+                const text = card.innerText.toLowerCase();
+                // البحث يتم على محتوى كارد الوصفة
+                card.style.display = text.includes(keyword) ? "block" : "none";
+            });
+        });
 
-    // بحث الوصفات
-    const searchInput = document.getElementById("recipeSearch");
-    searchInput.addEventListener("input", function () {
-      const keyword = this.value.toLowerCase();
-      document.querySelectorAll('.recipe-card').forEach(card => {
-        const text = card.innerText.toLowerCase();
-        card.style.display = text.includes(keyword) ? "block" : "none";
-      });
-    });
-  </script>
+        // ********************* تفعيل التنقل إلى الأقسام عند تحميل الصفحة (إذا كان الهاش موجودًا) *********************
+        if (window.location.hash) {
+            const targetElement = document.querySelector(window.location.hash);
+            if (targetElement) {
+                // استخدام دالة ScrollTo لضمان انتقال سلس وأخذ شريط التنقل الثابت (sticky navbar) في الاعتبار
+                window.onload = () => {
+                    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                    const topPosition = targetElement.offsetTop - navbarHeight - 20; // -20 مسافة إضافية
+                    window.scrollTo({
+                        top: topPosition,
+                        behavior: 'smooth'
+                    });
+                };
+            }
+        }
+    </script>
 
 </body>
 

@@ -1,110 +1,218 @@
 const exercises = [
     {
+        id: 1, // المعرّف الفريد
         title: "تمارين الكارديو",
         description: "تحسين صحة القلب وزيادة التحمل البدني.",
         color: "primary",
-        image: "https://images.pexels.com/photos/3757377/pexels-photo-3757377.jpeg"
+        image: "https://images.pexels.com/photos/3757377/pexels-photo-3757377.jpeg",
+        level: 'متوسط',
+        duration: '40 دقيقة',
+        reps: 'روتين مستمر',
+        focus: 'القلب والتنفس',
+        videoUrl: "https://www.youtube.com/embed/zxK-t4aVw98" // مثال: فيديو كارديو
     },
     {
+        id: 2,
         title: "تمارين القوة",
         description: "تقوي العضلات وتزيد القدرة على التحمل.",
         color: "success",
-        image: "https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg"
+        image: "https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg",
+        level: 'متقدم',
+        duration: '60 دقيقة',
+        reps: '4 مجموعات × 8 تكرارات',
+        focus: 'الجسم بالكامل',
+        videoUrl: "https://www.youtube.com/embed/Y-yM0yV9M24" // مثال: فيديو تمارين قوة
     },
     {
+        id: 3,
         title: "تمارين اليوغا",
         description: "تحسين المرونة والتوازن والاسترخاء.",
         color: "primary",
-        image: "https://images.pexels.com/photos/3822190/pexels-photo-3822190.jpeg"
+        image: "https://images.pexels.com/photos/3822190/pexels-photo-3822190.jpeg",
+        level: 'مبتدئ',
+        duration: '30 دقيقة',
+        reps: 'وضعيات مختلفة',
+        focus: 'المرونة والتوازن',
+        videoUrl: "https://www.youtube.com/embed/j7rKKpwdXNE" // مثال: فيديو يوغا
     },
     {
+        id: 4,
         title: "تمارين البطن",
         description: "تقوية عضلات البطن وتحسين التوازن الداخلي.",
         color: "danger",
-        image: "https://images.pexels.com/photos/4662438/pexels-photo-4662438.jpeg"
+        image: "https://images.pexels.com/photos/4662438/pexels-photo-4662438.jpeg",
+        level: 'متوسط',
+        duration: '15 دقيقة',
+        reps: '3 مجموعات × 15 تكرار',
+        focus: 'عضلات الجذع',
+        videoUrl: "https://www.youtube.com/embed/d3W-eGv02n0" // مثال: فيديو تمارين بطن
     },
     {
+        id: 5,
         title: "تمارين الرجلين",
         description: "بناء القوة في الفخذين والساقين وزيادة التوازن.",
         color: "warning",
-        image: "https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg"
+        image: "https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg",
+        level: 'متقدم',
+        duration: '35 دقيقة',
+        reps: '4 مجموعات × 12 تكرار',
+        focus: 'الفخذين والساقين',
+        videoUrl: "https://www.youtube.com/embed/9G3XgqP2v6Q" // مثال: فيديو تمارين رجلين
     },
     {
+        id: 6,
         title: "تمارين التمدد",
         description: "تحسين المرونة والتقليل من خطر الإصابة.",
         color: "dark",
-        image: "https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg"
+        image: "https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg",
+        level: 'مبتدئ',
+        duration: '10 دقائق',
+        reps: 'ثبات لمدة 30 ثانية',
+        focus: 'استرخاء العضلات',
+        videoUrl: "https://www.youtube.com/embed/k9k3h3eN4x0" // مثال: فيديو تمدد
     },
     {
+        id: 7,
         title: "تمارين التوازن",
         description: "تحسين التوازن والسيطرة على الجسم.",
         color: "primary",
-        image: "https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg"
+        image: "https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg",
+        level: 'متوسط',
+        duration: '20 دقيقة',
+        reps: 'حسب القدرة',
+        focus: 'التوازن والثبات',
+        videoUrl: "https://www.youtube.com/embed/Jc6zD3d886E" // مثال: فيديو توازن
     },
     {
+        id: 8,
         title: "تمارين الجسم العلوي",
         description: "تقوية عضلات الذراعين والكتفين والصدر.",
         color: "danger",
-        image: "https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg"
+        image: "https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg",
+        level: 'متقدم',
+        duration: '45 دقيقة',
+        reps: '4 مجموعات × 10 تكرارات',
+        focus: 'الذراعين والصدر',
+        videoUrl: "https://www.youtube.com/embed/wzJ-Nq6m5nI" // مثال: فيديو جسم علوي
     },
     {
+        id: 9,
         title: "تمارين الجسم السفلي",
         description: "تركيز على تقوية الساقين والفخذين.",
         color: "primary",
-        image: "https://images.pexels.com/photos/2261482/pexels-photo-2261482.jpeg"
+        image: "https://images.pexels.com/photos/2261482/pexels-photo-2261482.jpeg",
+        level: 'متوسط',
+        duration: '40 دقيقة',
+        reps: '3 مجموعات × 15 تكرار',
+        focus: 'الساقين والفخذين',
+        videoUrl: "https://www.youtube.com/embed/2-nFh0QG7E8" // مثال: فيديو جسم سفلي
     },
     {
+        id: 10,
         title: "تمارين HIIT",
         description: "زيادة معدل الحرق في وقت قصير.",
         color: "primary",
-        image: "https://images.pexels.com/photos/4140296/pexels-photo-4140296.jpeg"
+        image: "https://images.pexels.com/photos/4140296/pexels-photo-4140296.jpeg",
+        level: 'متقدم',
+        duration: '25 دقيقة',
+        reps: 'تمرين 40 ثانية، راحة 20 ثانية',
+        focus: 'حرق الدهون',
+        videoUrl: "https://www.youtube.com/embed/cbJ-P5hLw1M" // مثال: فيديو HIIT
     },
     {
+        id: 11,
         title: "تمارين المقاومة",
         description: "تحسين قوة العضلات والشد.",
         color: "success",
-        image: "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg"
+        image: "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg",
+        level: 'متوسط',
+        duration: '50 دقيقة',
+        reps: 'حسب البرنامج',
+        focus: 'تحسين العضلات',
+        videoUrl: "https://www.youtube.com/embed/l2mJb0A8D2s" // مثال: فيديو مقاومة
     },
     {
+        id: 12,
         title: "تمارين الاستشفاء",
         description: "تخفيف التوتر وتحسين الدورة الدموية.",
         color: "secondary",
-        image: "https://images.pexels.com/photos/3823047/pexels-photo-3823047.jpeg"
+        image: "https://images.pexels.com/photos/3823047/pexels-photo-3823047.jpeg",
+        level: 'مبتدئ',
+        duration: '15 دقيقة',
+        reps: 'حركات خفيفة',
+        focus: 'الاسترخاء',
+        videoUrl: "https://www.youtube.com/embed/0Qk775bLq_A" // مثال: فيديو استشفاء
     },
     {
+        id: 13,
         title: "تمارين بلانك",
         description: "تقوية عضلات الجذع وتحسين الثبات.",
         color: "success",
-        image: "https://images.pexels.com/photos/4056724/pexels-photo-4056724.jpeg"
+        image: "https://images.pexels.com/photos/4056724/pexels-photo-4056724.jpeg",
+        level: 'متوسط',
+        duration: '10 دقائق',
+        reps: 'ثبات لمدة 60 ثانية',
+        focus: 'الجذع والبطن',
+        videoUrl: "https://www.youtube.com/embed/ASdv-aQ7s4s" // مثال: فيديو بلانك
     },
     {
+        id: 14,
         title: "تمارين الدفع",
         description: "تقوية الجزء العلوي من الجسم وزيادة اللياقة.",
         color: "primary",
-        image: "https://images.pexels.com/photos/3838381/pexels-photo-3838381.jpeg"
+        image: "https://images.pexels.com/photos/3838381/pexels-photo-3838381.jpeg",
+        level: 'متقدم',
+        duration: '40 دقيقة',
+        reps: '4 مجموعات × 8 تكرارات',
+        focus: 'الصدر والكتفين',
+        videoUrl: "https://www.youtube.com/embed/IODxDxX7oi4" // مثال: فيديو تمارين دفع
     },
     {
+        id: 15,
         title: "تمارين العقلة",
         description: "بناء عضلات الظهر والذراعين.",
         color: "warning",
-        image: "https://images.pexels.com/photos/7674941/pexels-photo-7674941.jpeg"
+        image: "https://images.pexels.com/photos/7674941/pexels-photo-7674941.jpeg",
+        level: 'متقدم',
+        duration: '30 دقيقة',
+        reps: '3 مجموعات × 10 تكرارات',
+        focus: 'الظهر والذراعين',
+        videoUrl: "https://www.youtube.com/embed/vw5qj7Vv-o4" // مثال: فيديو عقلة
     },
     {
+        id: 16,
         title: "تمارين القفز",
         description: "زيادة اللياقة والتحمل البدني.",
         color: "primary",
-        image: "https://images.pexels.com/photos/3326717/pexels-photo-3326717.jpeg"
+        image: "https://images.pexels.com/photos/3326717/pexels-photo-3326717.jpeg",
+        level: 'متوسط',
+        duration: '20 دقيقة',
+        reps: 'تكرارات عالية',
+        focus: 'التحمل والكارديو',
+        videoUrl: "https://www.youtube.com/embed/Q0Fh-n1YFjQ" // مثال: فيديو قفز
     },
     {
+        id: 17,
         title: "تمارين الضغط الجانبي",
         description: "تفعيل عضلات الذراعين والجذع.",
         color: "success",
-        image: "https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg"
+        image: "https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg",
+        level: 'متقدم',
+        duration: '30 دقيقة',
+        reps: '3 مجموعات × 12 تكرار',
+        focus: 'الذراعين والجذع',
+        videoUrl: "https://www.youtube.com/embed/n4q4m45W14A" // مثال: فيديو ضغط جانبي
     },
     {
+        id: 18,
         title: "تمارين الجلوس والوقوف",
         description: "تحفيز عضلات الرجلين والظهر.",
         color: "secondary",
-        image: "https://images.pexels.com/photos/4397831/pexels-photo-4397831.jpeg"
+        image: "https://images.pexels.com/photos/4397831/pexels-photo-4397831.jpeg",
+        level: 'مبتدئ',
+        duration: '25 دقيقة',
+        reps: '3 مجموعات × 15 تكرار',
+        focus: 'الرجلين والظهر',
+        videoUrl: "https://www.youtube.com/embed/VpXQ9-0hJ18" // مثال: فيديو جلوس ووقوف
     }
 ];
