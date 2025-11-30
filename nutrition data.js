@@ -68,7 +68,7 @@ const challenges = [
     },
     {
         id: 202, // تم الإضافة
-        img: "https://images.pexels.com/photos/1137340/pexels-photo-1137340.jpeg",
+        img: "1.jpg",
         title: "تحدي الماء",
         desc: "تحدي شرب 8 أكواب ماء يوميًا لمدة 7 أيام.",
         btnText: "ابدأ التحدي",
