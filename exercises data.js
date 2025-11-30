@@ -1,218 +1,218 @@
 const exercises = [
     {
-        id: 1, // المعرّف الفريد
+        id: 1,
         title: "تمارين الكارديو",
-        description: "تحسين صحة القلب وزيادة التحمل البدني.",
-        color: "primary",
-        image: "https://images.pexels.com/photos/3757377/pexels-photo-3757377.jpeg",
-        level: 'متوسط',
-        duration: '40 دقيقة',
-        reps: 'روتين مستمر',
-        focus: 'القلب والتنفس',
-        videoUrl: "https://www.youtube.com/embed/zxK-t4aVw98" // مثال: فيديو كارديو
+        description: "كارديو حرق دهون عالي الكثافة (HIIT) لمدة 30 دقيقة بدون معدات. المدربة: ليتا لويس (Lita Lewis).",
+        color: "warning",
+        image: "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg",
+        level: 'متوسط/متقدم',
+        duration: '30 دقيقة',
+        reps: 'روتين كامل مرة واحدة',
+        focus: 'حرق الدهون وزيادة اللياقة',
+        videoUrl: "https://www.youtube.com/embed/ml6cT4AZdqI" // **الرابط الجديد والموثوق للكارديو**
     },
     {
         id: 2,
         title: "تمارين القوة",
-        description: "تقوي العضلات وتزيد القدرة على التحمل.",
+        description: "تمرين قوة شامل لكامل الجسم بدون معدات في المنزل. (كرر الروتين مرتين للوصول إلى 35 دقيقة).",
         color: "success",
         image: "https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg",
-        level: 'متقدم',
-        duration: '60 دقيقة',
-        reps: '4 مجموعات × 8 تكرارات',
-        focus: 'الجسم بالكامل',
-        videoUrl: "https://www.youtube.com/embed/Y-yM0yV9M24" // مثال: فيديو تمارين قوة
+        level: 'متوسط/متقدم',
+        duration: '35 دقيقة',
+        reps: '2 جولة × الروتين بالكامل',
+        focus: 'بناء العضلات والقوة القصوى',
+        videoUrl: "https://www.youtube.com/embed/-1A_gfviJic" // **الرابط الخامس (الموثوق به)**
     },
     {
-        id: 3,
+        id: 3, // تم تحديث المعرف من 3 إلى 3
         title: "تمارين اليوغا",
-        description: "تحسين المرونة والتوازن والاسترخاء.",
+        description: "لتقوية عضلات الرجلين والحوض، مع التركيز على التنفس والتأمل. روتين يوغا شامل.",
         color: "primary",
         image: "https://images.pexels.com/photos/3822190/pexels-photo-3822190.jpeg",
         level: 'مبتدئ',
         duration: '30 دقيقة',
         reps: 'وضعيات مختلفة',
-        focus: 'المرونة والتوازن',
-        videoUrl: "https://www.youtube.com/embed/j7rKKpwdXNE" // مثال: فيديو يوغا
+        focus: 'المرونة والتوازن وقوة الحوض',
+        videoUrl: "https://www.youtube.com/embed/Hlp6cBstaZs" // فيديو يوغا عربي (الأفضل المتاح)
     },
     {
         id: 4,
-        title: "تمارين البطن",
-        description: "تقوية عضلات البطن وتحسين التوازن الداخلي.",
+        title: "تمارين البطن والجذع",
+        description: "تمرين عضلات البطن والجذع (Core) لمدة 10 دقائق بدون معدات. المدربة: كارولين جيرفان.",
         color: "danger",
-        image: "https://images.pexels.com/photos/4662438/pexels-photo-4662438.jpeg",
-        level: 'متوسط',
-        duration: '15 دقيقة',
-        reps: '3 مجموعات × 15 تكرار',
-        focus: 'عضلات الجذع',
-        videoUrl: "https://www.youtube.com/embed/d3W-eGv02n0" // مثال: فيديو تمارين بطن
+        image: "https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg",
+        level: 'متوسط/متقدم',
+        duration: '10-13 دقيقة',
+        reps: 'روتين كامل مرة واحدة',
+        focus: 'عضلات البطن والجذع',
+        videoUrl: "https://www.youtube.com/embed/Z_dgrjRlD_4" // **الرابط الجديد لتمارين البطن**
     },
     {
         id: 5,
         title: "تمارين الرجلين",
-        description: "بناء القوة في الفخذين والساقين وزيادة التوازن.",
+        description: "بناء القوة في الفخذين والساقين وزيادة التوازن. (روتين 10 دقائق يمكن تكراره).",
         color: "warning",
         image: "https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg",
         level: 'متقدم',
         duration: '35 دقيقة',
         reps: '4 مجموعات × 12 تكرار',
         focus: 'الفخذين والساقين',
-        videoUrl: "https://www.youtube.com/embed/9G3XgqP2v6Q" // مثال: فيديو تمارين رجلين
+        videoUrl: "https://www.youtube.com/embed/_rM5dshKjr4" // فيديو تمارين رجلين عربي (مدرب رجل)
     },
     {
         id: 6,
         title: "تمارين التمدد",
-        description: "تحسين المرونة والتقليل من خطر الإصابة.",
+        description: "تحسين المرونة والتقليل من خطر الإصابة، روتين إطالة كامل للجسم.",
         color: "dark",
         image: "https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg",
         level: 'مبتدئ',
         duration: '10 دقائق',
         reps: 'ثبات لمدة 30 ثانية',
         focus: 'استرخاء العضلات',
-        videoUrl: "https://www.youtube.com/embed/k9k3h3eN4x0" // مثال: فيديو تمدد
+        videoUrl: "https://www.youtube.com/embed/q41Vx1NCTFA" // فيديو تمدد عربي (الأفضل المتاح)
     },
     {
         id: 7,
         title: "تمارين التوازن",
-        description: "تحسين التوازن والسيطرة على الجسم.",
+        description: "تحسين التوازن والسيطرة على الجسم مع مدرب رياضي عربي.",
         color: "primary",
         image: "https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg",
         level: 'متوسط',
         duration: '20 دقيقة',
         reps: 'حسب القدرة',
         focus: 'التوازن والثبات',
-        videoUrl: "https://www.youtube.com/embed/Jc6zD3d886E" // مثال: فيديو توازن
+        videoUrl: "https://www.youtube.com/embed/IE6Ez9US1og" // فيديو توازن عربي (مدرب رجل)
     },
     {
         id: 8,
         title: "تمارين الجسم العلوي",
-        description: "تقوية عضلات الذراعين والكتفين والصدر.",
+        description: "تقوية عضلات الذراعين والكتفين والصدر. (تمرين لكامل الجسم لكن مع تركيز على القوة).",
         color: "danger",
         image: "https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg",
         level: 'متقدم',
         duration: '45 دقيقة',
         reps: '4 مجموعات × 10 تكرارات',
         focus: 'الذراعين والصدر',
-        videoUrl: "https://www.youtube.com/embed/wzJ-Nq6m5nI" // مثال: فيديو جسم علوي
+        videoUrl: "https://www.youtube.com/embed/lNicLoSkL4k" // فيديو جسم علوي/كامل عربي (مدرب رجل)
     },
     {
         id: 9,
         title: "تمارين الجسم السفلي",
-        description: "تركيز على تقوية الساقين والفخذين.",
+        description: "تركيز على تقوية الساقين والفخذين في المنزل.",
         color: "primary",
         image: "https://images.pexels.com/photos/2261482/pexels-photo-2261482.jpeg",
         level: 'متوسط',
         duration: '40 دقيقة',
         reps: '3 مجموعات × 15 تكرار',
         focus: 'الساقين والفخذين',
-        videoUrl: "https://www.youtube.com/embed/2-nFh0QG7E8" // مثال: فيديو جسم سفلي
+        videoUrl: "https://www.youtube.com/embed/dH8wXJnxRZs" // فيديو جسم سفلي عربي (مدرب رجل)
     },
     {
         id: 10,
         title: "تمارين HIIT",
-        description: "زيادة معدل الحرق في وقت قصير.",
+        description: "زيادة معدل الحرق في وقت قصير. تمرين مكثف لحرق الدهون (30 دقيقة).",
         color: "primary",
         image: "https://images.pexels.com/photos/4140296/pexels-photo-4140296.jpeg",
         level: 'متقدم',
         duration: '25 دقيقة',
         reps: 'تمرين 40 ثانية، راحة 20 ثانية',
         focus: 'حرق الدهون',
-        videoUrl: "https://www.youtube.com/embed/cbJ-P5hLw1M" // مثال: فيديو HIIT
+        videoUrl: "https://www.youtube.com/embed/g2IAM8oMQow" // فيديو HIIT عربي (الأفضل المتاح)
     },
     {
         id: 11,
         title: "تمارين المقاومة",
-        description: "تحسين قوة العضلات والشد.",
+        description: "تحسين قوة العضلات والشد. روتين مقاومة لكامل الجسم بالمنزل.",
         color: "success",
         image: "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg",
         level: 'متوسط',
         duration: '50 دقيقة',
         reps: 'حسب البرنامج',
         focus: 'تحسين العضلات',
-        videoUrl: "https://www.youtube.com/embed/l2mJb0A8D2s" // مثال: فيديو مقاومة
+        videoUrl: "https://www.youtube.com/embed/4CeVTdm8aws" // فيديو مقاومة عربي (الأفضل المتاح)
     },
     {
         id: 12,
         title: "تمارين الاستشفاء",
-        description: "تخفيف التوتر وتحسين الدورة الدموية.",
+        description: "تخفيف التوتر وتحسين الدورة الدموية. (يركز الفيديو على تمارين علاج آلام الظهر).",
         color: "secondary",
         image: "https://images.pexels.com/photos/3823047/pexels-photo-3823047.jpeg",
         level: 'مبتدئ',
         duration: '15 دقيقة',
         reps: 'حركات خفيفة',
         focus: 'الاسترخاء',
-        videoUrl: "https://www.youtube.com/embed/0Qk775bLq_A" // مثال: فيديو استشفاء
+        videoUrl: "https://www.youtube.com/embed/QObcqtrfYwE" // فيديو استشفاء/علاج طبيعي عربي (مدرب رجل)
     },
     {
         id: 13,
         title: "تمارين بلانك",
-        description: "تقوية عضلات الجذع وتحسين الثبات.",
+        description: "تقوية عضلات الجذع وتحسين الثبات. (دليل كامل لتمرين البلانك).",
         color: "success",
         image: "https://images.pexels.com/photos/4056724/pexels-photo-4056724.jpeg",
         level: 'متوسط',
         duration: '10 دقائق',
         reps: 'ثبات لمدة 60 ثانية',
         focus: 'الجذع والبطن',
-        videoUrl: "https://www.youtube.com/embed/ASdv-aQ7s4s" // مثال: فيديو بلانك
+        videoUrl: "https://www.youtube.com/embed/TldvfwHQ0lw" // فيديو بلانك عربي (مدرب رجل)
     },
     {
         id: 14,
         title: "تمارين الدفع",
-        description: "تقوية الجزء العلوي من الجسم وزيادة اللياقة.",
+        description: "تقوية الجزء العلوي من الجسم (الصدر والكتف والتراي) وزيادة اللياقة.",
         color: "primary",
         image: "https://images.pexels.com/photos/3838381/pexels-photo-3838381.jpeg",
         level: 'متقدم',
         duration: '40 دقيقة',
         reps: '4 مجموعات × 8 تكرارات',
         focus: 'الصدر والكتفين',
-        videoUrl: "https://www.youtube.com/embed/IODxDxX7oi4" // مثال: فيديو تمارين دفع
+        videoUrl: "https://www.youtube.com/embed/SP2u52IrwSc" // فيديو تمارين دفع عربي (مدرب رجل)
     },
     {
         id: 15,
         title: "تمارين العقلة",
-        description: "بناء عضلات الظهر والذراعين.",
+        description: "بناء عضلات الظهر والذراعين. (دليل كامل لتعلم تمرين العقلة).",
         color: "warning",
         image: "https://images.pexels.com/photos/7674941/pexels-photo-7674941.jpeg",
         level: 'متقدم',
         duration: '30 دقيقة',
         reps: '3 مجموعات × 10 تكرارات',
         focus: 'الظهر والذراعين',
-        videoUrl: "https://www.youtube.com/embed/vw5qj7Vv-o4" // مثال: فيديو عقلة
+        videoUrl: "https://www.youtube.com/embed/Wa1YyH53Lek" // فيديو عقلة عربي (مدرب رجل)
     },
     {
         id: 16,
         title: "تمارين القفز",
-        description: "زيادة اللياقة والتحمل البدني.",
+        description: "زيادة القوة الانفجارية للرجلين وسرعة القفز.",
         color: "primary",
         image: "https://images.pexels.com/photos/3326717/pexels-photo-3326717.jpeg",
         level: 'متوسط',
         duration: '20 دقيقة',
         reps: 'تكرارات عالية',
         focus: 'التحمل والكارديو',
-        videoUrl: "https://www.youtube.com/embed/Q0Fh-n1YFjQ" // مثال: فيديو قفز
+        videoUrl: "https://www.youtube.com/embed/FCXBDdWwEns" // فيديو قفز/بلايومتريكس عربي (مدرب رجل)
     },
     {
         id: 17,
         title: "تمارين الضغط الجانبي",
-        description: "تفعيل عضلات الذراعين والجذع.",
+        description: "دليل لشرح وتفعيل تمرين الرفرفة الجانبية للكتفين (Lateral Raise) لتقوية الذراعين والجذع.",
         color: "success",
         image: "https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg",
         level: 'متقدم',
         duration: '30 دقيقة',
         reps: '3 مجموعات × 12 تكرار',
         focus: 'الذراعين والجذع',
-        videoUrl: "https://www.youtube.com/embed/n4q4m45W14A" // مثال: فيديو ضغط جانبي
+        videoUrl: "https://www.youtube.com/embed/QC0t0a2F1TU" // فيديو ضغط جانبي/رفرفة جانبية عربي (مدرب رجل)
     },
     {
         id: 18,
         title: "تمارين الجلوس والوقوف",
-        description: "تحفيز عضلات الرجلين والظهر.",
+        description: "تحفيز عضلات الرجلين والظهر. (تمرين الوقوف من وضعية الجلوس، ممتاز لتقوية الركبة).",
         color: "secondary",
         image: "https://images.pexels.com/photos/4397831/pexels-photo-4397831.jpeg",
         level: 'مبتدئ',
         duration: '25 دقيقة',
         reps: '3 مجموعات × 15 تكرار',
         focus: 'الرجلين والظهر',
-        videoUrl: "https://www.youtube.com/embed/VpXQ9-0hJ18" // مثال: فيديو جلوس ووقوف
+        videoUrl: "https://www.youtube.com/embed/7BekpPvSO5c" // فيديو جلوس ووقوف عربي (مدرب رجل)
     }
 ];
