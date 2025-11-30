@@ -77,7 +77,7 @@ const challenges = [
     },
     {
         id: 203, // تم الإضافة
-        img: "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg",
+        img: "3.jpg",
         title: "تحدي التوقف عن السكر",
         desc: "امتنع عن تناول السكريات المصنعة لمدة 10 أيام وحسّن طاقتك.",
         btnText: "ابدأ التحدي",
