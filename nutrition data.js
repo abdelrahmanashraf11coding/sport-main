@@ -16,7 +16,7 @@ const tips = [
     },
     {
         id: 3, // تم الإضافة
-        img: "https://images.pexels.com/photos/1458678/pexels-photo-1458678.jpeg",
+        img: "2.jpg",
         title: "اشرب كمية كافية من الماء",
         desc: "الماء ضروري لتنشيط الهضم وتجديد الخلايا.",
         videoUrl: "https://www.youtube.com/embed/Tl51D18IMc0" // فيديو افتراضي للنصيحة
